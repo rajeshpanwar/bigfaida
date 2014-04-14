@@ -12,7 +12,7 @@
         Rajiv Kumar
     </author>
     <content src="index.html" />
-    <access origin="*" />
+    <access origin="http://bigfaida.storehippo.com" />
     <gap:platform name="android" />
     <gap:platform name="ios" />
 
