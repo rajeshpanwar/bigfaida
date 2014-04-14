@@ -26,7 +26,7 @@
     <icon src="icons/ios/reader-72-1.png" gap:platform="ios" width="72" height="72" />
     <icon src="icons/ios/reader-114-1.png" gap:platform="ios" width="114" height="114" />
     <icon src="icons/ios/reader-144-1.png" gap:platform="ios" width="144" height="144" />
-    <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />
+    <!--<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />-->
     <gap:splash src="splash/ios/Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
     <gap:splash src="splash/ios/Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
     <gap:splash src="splash/ios/Default-Landscape_at_2x.png" gap:platform="ios" width="2048" height="1496" />
