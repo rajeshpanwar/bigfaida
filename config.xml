@@ -15,16 +15,15 @@
     <access origin="*" />
     <gap:platform name="android" />
     <gap:platform name="ios" />
-
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
-    <preference name="permissions" value="none" />
     <icon src="icon.png" />
     <gap:splash src="splash.png" />
-    <plugin name="Contacts" value="org.apache.cordova.ContactManager" />
-    <plugin name="Contacts" value="CDVContacts" />
     <feature name="Contacts">
         <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+    </feature>
+    <feature name="Contacts">
+        <param name="ios-package" value="CDVContacts" />
     </feature>
     <icon src="icons/ios/reader-57-1.png" gap:platform="ios" width="57" height="57" />
     <icon src="icons/ios/reader-72-1.png" gap:platform="ios" width="72" height="72" />
