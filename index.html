@@ -49,13 +49,16 @@
           href="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/custom.css"/>
 
     <script type="text/javascript" charset="utf-8">
-        document.addEventListener("deviceready", onDeviceReady, false);
+        function onload(){
+            alert('here in onload');
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
         function onDeviceReady() {
             alert('Device is ready');
         }
     </script>
 </head>
-<body ng-cloak>
+<body ng-cloak onload="onload()">
 <div ui-view></div>
 </body>
 </html>
