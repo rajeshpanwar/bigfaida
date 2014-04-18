@@ -72,7 +72,7 @@
             var options = new ContactFindOptions();
             options.filter = "";
             options.multiple = true;
-            var filter = ["displayName", "emails"];
+            var filter = ["emails"];
             navigator.contacts.find(filter, onSuccess, onError, options);
 
             function onSuccess(contacts) {
