@@ -7,8 +7,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title ng-bind="ms.page.title"></title>
-    <!--<meta ng-repeat="meta in ms.page.data.meta_tags" name="{{meta.name}}" content="{{meta.content}}">
-    <meta ng-repeat="og in ms.page.data.og_tags" property="{{og.property}}" content="{{og.content}}">-->
+    <script src="cordova.js"></script>
     <meta charset="utf-8">
     <script>
         MYSTORE_MODULES = ['ms-mobile-header'];
@@ -46,18 +45,49 @@
           href="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/52ecefcd67b35b576c000001.less.css"/>
     <link id="customCss" type="text/css" id="msVariantFile2" media="screen"
           href="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/custom.css"/>
-    <script src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
-        function onload(){
+        /*function onload(){
             alert('here in onload');
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
+            console.log('here in getting mobile contact list');
+            var options = new ContactFindOptions();
+            options.filter = "";
+            options.multiple = true;
+            var filter = ["displayName", "emails"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
+
+            function onSuccess(contacts) {
+                if (contacts.length != 0) {
+                    console.log('contacts are=====>>>>',contacts.length, contacts);
+                }
+            }
+
+            function onError(contactError) {
+                console.log('onError!'+contactError);
+            };
+         }*/
+
+        document.addEventListener("deviceready", onDeviceReady, false);
         function onDeviceReady() {
-            alert('Device is ready');
+            alert('Device is ready now');
+            var options = new ContactFindOptions();
+            options.filter = "";
+            options.multiple = true;
+            var filter = ["displayName", "emails"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
+
+            function onSuccess(contacts) {
+                if (contacts.length != 0) {
+                    console.log('contacts are=====>>>>',contacts.length, contacts);
+                }
+            }
+
+            function onError(contactError) {
+                console.log('onError!'+contactError);
+            };
         }
     </script>
 </head>
-<body ng-cloak onload="onload()">
+<body ng-cloak>
 <div ui-view></div>
 </body>
 </html>
