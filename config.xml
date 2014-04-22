@@ -15,6 +15,7 @@
     <access origin="*" />
     <gap:platform name="android" />
     <gap:platform name="ios" />
+    <gap:platform name="windows" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
     <icon src="icon.png" />
