@@ -21,7 +21,7 @@
     <icon src="icon.png" />
     <gap:splash src="splash.png" />
     <gap:plugin name="org.apache.cordova.contacts" version="0.2.9" />
-    <gap:plugin name="info.asankan.phonegap.smsplugin.smsplugin" version="0.1.0" />
+    <gap:plugin name="info.asankan.phonegap.smsplugin" version="0.1.0" />
     <icon src="icons/ios/reader-57-1.png" gap:platform="ios" width="57" height="57" />
     <icon src="icons/ios/reader-72-1.png" gap:platform="ios" width="72" height="72" />
     <icon src="icons/ios/reader-114-1.png" gap:platform="ios" width="114" height="114" />
