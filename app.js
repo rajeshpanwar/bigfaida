@@ -4,6 +4,7 @@
 
 angular.module('mystore').run(['$scope','$rootScope',function($scope, $rootScope){
     if(!(localStorage && localStorage.currentUser)) {
+        alert('no localstorage present');
         $rootScope.ms.goTo("/user/login");
     }
     else {
@@ -11,6 +12,7 @@ angular.module('mystore').run(['$scope','$rootScope',function($scope, $rootScope
             alert('please login again');
             $rootScope.ms.user = localStorage.currentUser;
         }else{
+            alert('redirect to home page');
             $rootScope.ms.goTo('/');
         }
     }
