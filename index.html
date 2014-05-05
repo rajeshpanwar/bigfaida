@@ -46,6 +46,22 @@
           href="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/52ecefcd67b35b576c000001.less.css"/>
     <link id="customCss" type="text/css" id="msVariantFile2" media="screen"
           href="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/custom.css"/>
+
+    <script>
+       angular.module('mystore').run(['$scope','$rootScope',function($scope, $rootScope){
+            if(!(localStorage && localStorage.currentUser)) {
+                $rootScope.ms.goTo("/user/login");
+            }
+            else {
+                if(!$rootScope.ms.user) {
+                    alert('please login again');
+                    $rootScope.ms.user = localStorage.currentUser;
+                }else{
+                    $rootScope.ms.goTo('/');
+                }
+            }
+       }]);
+    </script>
 </head>
 <body ng-cloak>
 <div ui-view></div>
