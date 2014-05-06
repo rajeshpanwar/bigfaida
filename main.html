@@ -61,7 +61,8 @@
             else {
                 if(!$rootScope.ms.user) {
                     alert('please login again');
-                    $rootScope.ms.user = localStorage.currentUser;
+                    $rootScope.ms.user = angular.fromJson(localStorage.currentUser);
+                    alert($rootScope.ms.user);
                     $rootScope.ms.goTo('/');
                 }else{
                     alert('redirect to home page');
