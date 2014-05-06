@@ -49,6 +49,27 @@
 
     <!--<script type="text/javascript"
             src="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/app.js"></script>-->
+    <script>
+
+        console.log("i am here 8");
+        angular.module('mystore').run(['$rootScope',function($rootScope){
+            console.log('inside run function ===========');
+            if(!localStorage.currentUser) {
+                alert('no localstorage present');
+                $rootScope.ms.goTo("/user/login");
+            }
+            else {
+                if(!$rootScope.ms.user) {
+                    alert('please login again');
+                    $rootScope.ms.user = localStorage.currentUser;
+                }else{
+                    alert('redirect to home page');
+                    $rootScope.ms.goTo('/');
+                }
+            }
+        }]);
+
+    </script>
 </head>
 <body ng-cloak>
 
