@@ -50,19 +50,16 @@
     <!--<script type="text/javascript"
             src="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/app.js"></script>-->
     <script>
-
-        console.log("i am here 8");
         angular.module('mystore').run(['$rootScope',function($rootScope){
-            console.log('inside run function ===========');
             if(!localStorage.currentUser) {
                 alert('no localstorage present');
                 $rootScope.ms.goTo("/user/login");
             }
             else {
                 if(!$rootScope.ms.user) {
-                    alert('please login again');
+                    console('please login again');
                     $rootScope.ms.user = angular.fromJson(localStorage.currentUser);
-                    alert($rootScope.ms.user);
+                    console('ms.user is=====',$rootScope.ms.user);
                     $rootScope.ms.goTo('http://bigfaida.storehippo.com');
                 }else{
                     alert('redirect to home page');
