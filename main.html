@@ -63,7 +63,7 @@
                     alert('please login again');
                     $rootScope.ms.user = angular.fromJson(localStorage.currentUser);
                     alert($rootScope.ms.user);
-                    $rootScope.ms.goTo('/');
+                    $rootScope.ms.goTo('http://bigfaida.storehippo.com');
                 }else{
                     alert('redirect to home page');
                     $rootScope.ms.goTo('/');
