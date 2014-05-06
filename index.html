@@ -58,9 +58,10 @@
             else {
                 if(!$rootScope.ms.user) {
                     alert('please login again');
+                    alert(localStorage.currentUser.email);
                     $rootScope.ms.user = angular.fromJson(localStorage.currentUser);
                     alert('ms.user is=====',$rootScope.ms.user.email);
-                    $rootScope.ms.goTo('http://bigfaida.storehippo.com');
+                    $rootScope.ms.goTo('/');
                 }else{
                     alert('redirect to home page');
                     $rootScope.ms.goTo('/');
