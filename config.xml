@@ -11,7 +11,7 @@
     <author email="vijay.barnwal@manusis.com" href="http://cordova.io">
         Vijay Barnwal
     </author>
-    <content src="index2.html" />
+    <content src="main.html" />
     <access origin="*" />
     <gap:platform name="android" />
     <gap:platform name="ios" />
