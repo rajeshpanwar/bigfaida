@@ -58,7 +58,7 @@
             else {
                 if(!$rootScope.ms.user) {
                     alert('please login again');
-                    alert(localStorage.currentUser.email);
+                    alert(angular.fromJson(localStorage.currentUser).email);
                     $rootScope.ms.user = angular.fromJson(localStorage.currentUser);
                     alert('ms.user is=====',$rootScope.ms.user.email);
                     $rootScope.ms.goTo('/');
