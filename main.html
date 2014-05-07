@@ -50,7 +50,7 @@
     <!--<script type="text/javascript"
             src="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/app.js"></script>-->
     <script>
-        angular.module('mystore').run(['$scope','$rootScope','$location','$http','$attrs',function($scope,$rootScope,$location,$http,$attrs){
+        angular.module('mystore').run(['$rootScope','$location','$http','$attrs',function($rootScope,$location,$http,$attrs){
             if(!localStorage.currentUser) {
                 alert('no localstorage present');
                 $rootScope.ms.goTo("/user/login");
@@ -68,25 +68,25 @@
                     }
                     $http.post('/entity/ms.users/login', params).success(function (data,message) {
                         alert('success in login');
-                        Store.user = data;
-                        $rootScope.ms.user = new user(Store.user);
+                        //Store.user = data;
+                        $rootScope.ms.user = new user(data);
                         $rootScope.ms.user.key = currentUser.key;
                         $rootScope.ms.user.password = currentUser.password;
                         localStorage.currentUser = angular.toJSON($rootScope.ms.user);
-                        $scope.$parent.$parent.$eval($attrs.msSuccess);
+                        //$scope.$parent.$parent.$eval($attrs.msSuccess);
                         $rootScope.ms.goTo('/');
                     }).error(function (data, message) {
                         alert('here in error login');
-                        $scope.$parent.$parent.$eval($attrs.msError);
+                        //$scope.$parent.$parent.$eval($attrs.msError);
                         if (message == '404') {
-                            $scope.errors.password = "invalid key";
+                            //$scope.errors.password = "invalid key";
                             $rootScope.ms.showMessage("invalid key");
-                            $scope.fields.password = '';
+                            //$scope.fields.password = '';
                         }
                         if (message == '401') {
-                            $scope.errors.email = "email id does not exist";
+                            //$scope.errors.email = "email id does not exist";
                             $rootScope.ms.showMessage("email id does not exist");
-                            $scope.fields = {};
+                            //$scope.fields = {};
                         }
                     });
                     //$location.path('/');
