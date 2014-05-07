@@ -76,6 +76,7 @@
                         $scope.$parent.$parent.$eval($attrs.msSuccess);
                         $rootScope.ms.goTo('/');
                     }).error(function (data, message) {
+                        alert('here in error login');
                         $scope.$parent.$parent.$eval($attrs.msError);
                         if (message == '404') {
                             $scope.errors.password = "invalid key";
