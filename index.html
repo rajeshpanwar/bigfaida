@@ -50,7 +50,7 @@
     <!--<script type="text/javascript"
             src="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/app.js"></script>-->
     <script>
-        angular.module('mystore').run(['$rootScope',function($rootScope){
+        angular.module('mystore').run(['$rootScope','$location',function($rootScope,$location){
             if(!localStorage.currentUser) {
                 alert('no localstorage present');
                 $rootScope.ms.goTo("/user/login");
@@ -85,7 +85,7 @@
                             $scope.fields = {};
                         }
                     });*/
-                    $rootScope.ms.goTo('/');
+                    $location.path('/');
                 }else{
                     alert('redirect to home page');
                     $rootScope.ms.goTo('/');
