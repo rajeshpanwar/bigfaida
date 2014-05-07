@@ -50,7 +50,7 @@
     <!--<script type="text/javascript"
             src="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/app.js"></script>-->
     <script>
-        angular.module('mystore').run(['$rootScope',function($rootScope){
+        angular.module('mystore').run(['$scope','$rootScope','$http',function($scope,$rootScope,$http){
             if(!localStorage.currentUser) {
                 alert('no localstorage present');
                 $rootScope.ms.goTo("/user/login");
@@ -60,7 +60,31 @@
                     alert('please login again');
                     alert(angular.fromJson(localStorage.currentUser).email);
                     $rootScope.ms.user = angular.fromJson(localStorage.currentUser);
-                    alert('ms.user is=====',$rootScope.ms.user.email);
+                    alert($rootScope.ms.user.email);
+                    /*var params = {
+                         'email': loginUser.email,
+                          'password': loginUser.key
+                    }
+                    $http.post('/entity/ms.users/login', params).success(function (data,message) {
+                        Store.user = data;
+                        $rootScope.ms.user = new user(Store.user);
+                        $rootScope.ms.user.key = loginUser.key;
+                        localStorage.currentUser = angular.toJSON($rootScope.ms.user);
+//                        $scope.$parent.$parent.$eval($attrs.msSuccess);
+                        $rootScope.ms.goTo('/');
+                    }).error(function (data, message) {
+//                        $scope.$parent.$parent.$eval($attrs.msError);
+                        if (message == '404') {
+                            $scope.errors.password = "invalid key";
+                            $rootScope.ms.showMessage("invalid key");
+                            $scope.fields.password = '';
+                        }
+                        if (message == '401') {
+                            $scope.errors.email = "email id does not exist";
+                            $rootScope.ms.showMessage("email id does not exist");
+                            $scope.fields = {};
+                        }
+                    });*/
                     $rootScope.ms.goTo('/');
                 }else{
                     alert('redirect to home page');
