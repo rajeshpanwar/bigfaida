@@ -57,16 +57,17 @@
             }
             else {
                 if(!$rootScope.ms.user) {
-                    alert('please login again');
-                    alert(angular.fromJson(localStorage.currentUser).email);
+                    //alert('please login again');
+                    //alert(angular.fromJson(localStorage.currentUser).email);
                     var currentUser = angular.fromJson(localStorage.currentUser);
-                    alert(currentUser.email);
-                    alert(currentUser.password);
+                    //alert(currentUser.email);
+                    //alert(currentUser.password);
                     var params = {
                          'email': currentUser.email,
                           'password': currentUser.password
                     }
                     $http.post('/entity/ms.users/login', params).success(function (data,message) {
+
                         alert('success in login');
                         //Store.user = data;
                         $rootScope.ms.user = new user(data);
@@ -76,7 +77,7 @@
                         //$scope.$parent.$parent.$eval($attrs.msSuccess);
                         $rootScope.ms.goTo('/');
                     }).error(function (data, message) {
-                        alert('here in error login');
+                        //alert('here in error login');
                         //$scope.$parent.$parent.$eval($attrs.msError);
                         if (message == '404') {
                             //$scope.errors.password = "invalid key";
