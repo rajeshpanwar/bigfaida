@@ -50,7 +50,7 @@
     <!--<script type="text/javascript"
             src="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/app.js"></script>-->
     <script>
-        angular.module('mystore').run(['$rootScope','$location','$http','$attrs',function($rootScope,$location,$http,$attrs){
+        angular.module('mystore').run(['$rootScope','$location','$http',function($rootScope,$location,$http){
             if(!localStorage.currentUser) {
                 alert('no localstorage present');
                 $rootScope.ms.goTo("/user/login");
