@@ -28,8 +28,9 @@
 
     <script>
         angular.module('mystore').run(['$rootScope','$http',function($rootScope,$http){
+
             if(!localStorage.currentUser) {
-                alert('no localstorage present');
+                //alert('no localstorage present');
                 $rootScope.ms.goTo("/user/login");
             }
             else {
@@ -45,7 +46,7 @@
                     }
                     $http.post('/entity/ms.users/login', params).success(function (data,message) {
 
-                        alert('success in login');
+                        //alert('success in login');
                         //Store.user = data;
                         $rootScope.ms.user = new user(data);
                         $rootScope.ms.user.key = currentUser.key;
@@ -69,7 +70,7 @@
                     });
                     //$location.path('/');
                 }else{
-                    alert('redirect to home page');
+                    //alert('redirect to home page');
                     $rootScope.ms.goTo('/');
                 }
             }
