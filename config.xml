@@ -43,6 +43,5 @@
     <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
     <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
 
-    <!-- retina iPad support: PhoneGap 2.5.0+ only -->
 
 </widget>
