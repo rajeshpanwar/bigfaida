@@ -53,7 +53,7 @@
         angular.module('mystore').config(['$rootScope','$http',function($rootScope,$http){
 
             if(!localStorage.currentUser) {
-                //alert('no localstorage present');
+                alert('no localstorage present');
                 $rootScope.ms.goTo("/user/login");
             }
             else {
