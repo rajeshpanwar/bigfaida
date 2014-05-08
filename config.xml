@@ -26,15 +26,14 @@
     <!--<feature name="SmsPlugin">
         <param name="android-package" value="org.apache.cordova.plugin.SmsPlugin"/>
     </feature>-->
-    <icon src="icons/ios/reader-57-1.png" gap:platform="ios" width="57" height="57" />
-    <icon src="icons/ios/reader-72-1.png" gap:platform="ios" width="72" height="72" />
-    <icon src="icons/ios/reader-114-1.png" gap:platform="ios" width="114" height="114" />
-    <icon src="icons/ios/reader-144-1.png" gap:platform="ios" width="144" height="144" />
-    <!--<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />-->
-    <gap:splash src="splash/ios/Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
+    <icon src="icons/ios/57x57.jpg" gap:platform="ios" width="57" height="57" />
+    <icon src="icons/ios/72x72.jpg" gap:platform="ios" width="72" height="72" />
+    <icon src="icons/ios/114x114.jpg" gap:platform="ios" width="114" height="114" />
+    <icon src="icons/ios/144x144.jpg" gap:platform="ios" width="144" height="144" />
+    <!--<gap:splash src="splash/ios/Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
     <gap:splash src="splash/ios/Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
     <gap:splash src="splash/ios/Default-Landscape_at_2x.png" gap:platform="ios" width="2048" height="1496" />
-    <gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
+    <gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />-->
 
 
     <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
