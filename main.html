@@ -49,39 +49,7 @@
     <link id="customCss" type="text/css" id="msVariantFile2" media="screen"
           href="http://cdn.storehippo.com/s/534277f51de4c9b20b000001/assets/5305dc45525cc89e10000001/custom.css"/>
 
-    <!--<script>
-        angular.module('mystore').config(['$rootScope','$http',function($rootScope,$http){
 
-            if(!localStorage.currentUser) {
-                alert('no localstorage present');
-                $rootScope.ms.goTo("/user/login");
-            }
-            else {
-                if(!$rootScope.ms.user) {
-                    var currentUser = angular.fromJson(localStorage.currentUser);
-                    var params = {
-                        'email': currentUser.email,
-                        'password': currentUser.password
-                    }
-                    $http.post('/entity/ms.users/login', params).success(function (data, message) {
-                        Store.user = data;
-                        $rootScope.ms.user = new user(data);
-                        $rootScope.ms.user.key = currentUser.key;
-                        $rootScope.ms.user.password = currentUser.password;
-                        localStorage.currentUser = angular.toJson($rootScope.ms.user);
-                        //$scope.$parent.$parent.$eval($attrs.msSuccess);
-                        $rootScope.ms.goTo('/');
-                    }).error(function (data, message) {
-                        alert('Oops! Something went wrong');
-                    });
-                }else{
-                    //alert('redirect to home page');
-                    $rootScope.ms.goTo('/');
-                }
-            }
-        }]);
-
-    </script>-->
 </head>
 <body ng-cloak>
 
