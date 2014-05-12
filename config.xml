@@ -18,6 +18,7 @@
     <gap:platform name="winphone" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
+    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
     <icon src="icon.png" />
     <gap:splash src="splash.png" />
     <gap:plugin name="org.apache.cordova.contacts" version="0.2.9" />
