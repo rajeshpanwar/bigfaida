@@ -20,6 +20,8 @@
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="true" />
     <preference name="android-minSdkVersion" value="9" />
+    <preference name="KeepRunning" value="false"/>
+    <preference name="LoadUrlTimeoutValue" value="10000"/>
 
     <icon src="icon.png" />
     <gap:splash src="splash.png" />
