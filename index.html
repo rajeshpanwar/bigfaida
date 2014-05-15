@@ -5,15 +5,7 @@
     <head>
     </head>
     <script>
-        document.addEventListener("deviceready", onDeviceReady, false);
-        function onDeviceReady() {
-            var networkState = checkConnection();
-            if (networkState == Connection.NONE) {
-                navigator.notification.alert('This app requires an internet connection');
-            } else {
-                window.location='./main.html';
-            }
-        }
+           window.location='./main.html';
     </script>
 <body>
 </body>
