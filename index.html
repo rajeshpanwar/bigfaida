@@ -2,8 +2,22 @@
 <html>
 <head>
     <title>BigFaida</title>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <script src="cordova.js"></script>
+        <script src="smsplugin.js"></script>
+    </head>
     <script>
-        window.location='./main.html';
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            var networkState = checkConnection();
+            if (networkState == Connection.NONE) {
+                navigator.notification.alert('This app requires an internet connection');
+            } else {
+                window.location='./main.html';
+            }
+        }
     </script>
 <body>
 </body>
