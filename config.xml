@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.manusis.bigfaida"
         versionCode="com.manusis.bigfaida"
-        version   = "1.0.0">
+        version   = "1.0.1">
     <name>BigFaida</name>
     <description>
         Ecommerce Platform
