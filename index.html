@@ -3,10 +3,14 @@
 <head>
     <title>BigFaida</title>
     <head>
+      <script src='cordova.js'></script>
     </head>
 <body>
     <script>
-        window.location = './main.html';
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            window.location="http://www.bigfaida.net";
+        }
     </script>
 </body>
 </html>
