@@ -12,7 +12,7 @@
         Vijay Barnwal
     </author>
     <content src="index.html" />
-    <access origin="*" />
+    <access origin="*"/>
     <gap:platform name="android" />
     <gap:platform name="ios" />
     <gap:platform name="winphone" />
